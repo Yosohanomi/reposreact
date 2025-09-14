@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './App.css';
 import { Button } from './Btn/Button';
 const fruits =['apple', 'banana', 'fig']
@@ -14,10 +15,15 @@ function App({test}) {
           })
         }     
       </ul>
-      <Button text={info} message='read more'/>
+      <Button text={[1, 2, 3]} message='read more'/>
       <p>{test}</p>
     </div>
   );
+}
+
+App.propTypes = {
+  test: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
 }
 
 export default App;
